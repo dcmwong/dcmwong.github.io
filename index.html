@@ -34,7 +34,7 @@
     });
   };
 
-  var publishingRunning = false;
+  var publishRunning = false;
   $(document).ready(function(){
     testAnim('fadeInDown');
       
@@ -46,7 +46,9 @@
         $('#animationSandbox h1').addClass("site__title");
         
         $('main').removeClass("site__content");
-        $("publishButton").hide(); 
+        $("publishButton").removeClass().addClass('fadeOut animated');
+        
+        publishRunning = true;
       }
     });
   });
