@@ -22,7 +22,7 @@
 </header>
 <main class="site__content island" role="content">
   <div class="wrap">
-    <span style="display: block;"><button class="butt trigger-publication">Start Publish </button></span>
+    <span style="display: block;"><button id="publishButton" class="butt trigger-publication">Start Publish </button></span>
   </div>
 </main>
 <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
@@ -34,14 +34,20 @@
     });
   };
 
+  var publishingRunning = false;
   $(document).ready(function(){
-      testAnim('fadeInDown');
+    testAnim('fadeInDown');
       
     $('.trigger-publication').click(function(e){
-      e.preventDefault();
-      testAnim('flip');
-      $('#animationSandbox h1').text("Publication started ...");
-      $('#animationSandbox h1').addClass("site__title");
+      if (!publishRunning) {
+        e.preventDefault();
+        testAnim('flip');
+        $('#animationSandbox h1').text("Publication started ...");
+        $('#animationSandbox h1').addClass("site__title");
+        
+        $('main').removeClass("site__content");
+        $("publishButton").hide(); 
+      }
     });
   });
 
