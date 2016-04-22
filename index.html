@@ -36,7 +36,7 @@
 
   var publishRunning = false;
   $(document).ready(function(){
-    testAnim('fadeInDown');
+    //testAnim('fadeInDown');
       
     $('.trigger-publication').click(function(e){
       if (!publishRunning) {
@@ -46,7 +46,7 @@
         $('#animationSandbox h1').addClass("site__title");
         
         $('main').removeClass("site__content");
-        $("#publishButton").removeClass().addClass('fadeOut animated');
+        $("#publishButton").addClass('fadeOut animated');
         
         publishRunning = true;
       }
