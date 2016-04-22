@@ -36,7 +36,6 @@
 
   var publishRunning = false;
   $(document).ready(function(){
-    //testAnim('fadeInDown');
       
     $('.trigger-publication').click(function(e){
       if (!publishRunning) {
@@ -47,7 +46,7 @@
         
         $('main').removeClass("site__content");
         $("#publishButton").removeClass().addClass('fadeOut animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-          $(this).removeClass();
+         
         });
         
         publishRunning = true;
