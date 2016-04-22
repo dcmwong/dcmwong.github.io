@@ -1,27 +1,15 @@
 <html>
-<head>
-  <title>Animate.css</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, minimal-ui">
 
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//code.jquery.com">
-
-  <link href="//fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700" rel="stylesheet" type="text/css">
-
-  <link rel="stylesheet" href="animate.css">
-  <link rel="stylesheet" href="style.css">
-</head>
 <body>
 <header class="site__header island">
   <div class="wrap">
-   <span id="animationSandbox" style="display: block;" class="fadeInUp"><h1 class="site__title mega">There is no publish running at the moment.</h1></span>
-    <span class="beta subhead">The latest publish can be seen <a href="https://gitlab.com/wongcheming/test-proj/commit/8e00e0e2fced82926d2208d9bc10dfa51e537e12">here.</a></span>
+   <span id="animationSandbox" style="display: block;" class="fadeInDown"><h1 class="site__title mega">No publish running at the moment.</h1></span>
+    <span class="beta subhead">The latest publish can be seen <a href="https://gitlab.com/wongcheming/test-proj/commit/8e00e0e2fced82926d2208d9bc10dfa51e537e12">here</a>.</span>
   </div>
 </header>
 
-<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-<script type="text/javascript">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="tex/javascript">
 
   function testAnim(x) {
     $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -30,7 +18,6 @@
   };
 
   $(document).ready(function(){
-  	console.log("efjksjfljksd");
     $('.js--triggerAnimation').click(function(e){
       e.preventDefault();
       var anim = $('.js--animations').val();
