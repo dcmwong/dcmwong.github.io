@@ -85,13 +85,13 @@ h2, .beta {
   margin-bottom: .75rem;
 
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   line-height: 1;
 }
 
 @media (min-width: 650px) {
   .mega {
-    font-size: 2rem;
+    font-size: 4rem;
     line-height: 1;
   }
 }
