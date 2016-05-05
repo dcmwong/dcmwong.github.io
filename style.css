@@ -2,14 +2,6 @@
   $RESET
 \*-----------------------------------*/
 
-input, select, button, textarea {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-
-  font: inherit;
-  color: inherit;
-}
 
 /*-----------------------------------*\
   $OBJECTS
