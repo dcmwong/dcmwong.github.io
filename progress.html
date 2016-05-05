@@ -16,35 +16,5 @@
       <div class="indeterminate"></div>
     </div>
 
-<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-<script type="text/javascript">
-
-  function testAnim(x) {
-    $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      $(this).removeClass();
-    });
-  };
-
-  var publishRunning = false;
-  $(document).ready(function(){
-      
-    $('.trigger-publication').click(function(e){
-      if (!publishRunning) {
-        e.preventDefault();
-        testAnim('flip');
-        $('#animationSandbox h1').text("Publication started ...");
-        $('#animationSandbox h1').addClass("site__title");
-        
-        $('main').removeClass("site__content");
-        $("#publishButton").removeClass().addClass('fadeOut animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-         
-        });
-        
-        publishRunning = true;
-      }
-    });
-  });
-
-</script>
 </body>
 </html>
