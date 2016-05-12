@@ -9,6 +9,6 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 console.log(window.location);
-console.log(getParameterByName("foo", window.location.search));
+document.write(getParameterByName("test", window.location.search));
 
 </script>
