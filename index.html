@@ -1,59 +1,64 @@
 <html>
-<head>
-  <title>Publish the knowledgebase</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, minimal-ui">
-
-  <link href="//fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="animate.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="progress.css">
-</head>
-<body>
-<header class="site__header island">
-  <div class="wrap">
-   <span id="animationSandbox" style="display: block;" class="fadeUp"><h1 class="mega">No publish running at the moment.</h1></span>
-    <span class="beta subhead">The latest publish can be seen <a target="_blank" href="https://gitlab.com/wongcheming/test-proj/commit/8e00e0e2fced82926d2208d9bc10dfa51e537e12">here.</a></span>
-    <div class="progress">
-      <div class="indeterminate"></div>
+  <body>
+<div class="container">
+  <form action="#" method="POST" sheetsu="39a0276bfc0c">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <input name="name" placeholder="Name" type="text" id="name" />
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <input name="email" placeholder="Email" type="email" id="email" />
+      </div>
     </div>
-  </div>
-</header>
-<main class="site__content island" role="content">
-  <div class="wrap">
-    <span id="publishButton" style="display: block;"><button class="butt trigger-publication">Start Publish </button></span>
-  </div>
-</main>
-<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-<script type="text/javascript">
+    <div class="row">
+      <div class="col-md-12">
+        <textarea name="message" placeholder="Message" rows="4" id="textarea"></textarea>
+      </div>
+      <div class="col-md-12">
+        <input value="Send message" type="submit" id="submit" />
+      </div>
+    </div>
+  </form>
+</div>
 
-  function testAnim(x) {
-    $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      $(this).removeClass();
-    });
-  };
+<style>@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
 
-  var publishRunning = false;
-  $(document).ready(function(){
-      
-    $('.trigger-publication').click(function(e){
-      if (!publishRunning) {
-        e.preventDefault();
-        testAnim('flip');
-        $('#animationSandbox h1').text("Publication started ...");
-        $('#animationSandbox h1').addClass("site__title");
-        
-        $('main').removeClass("site__content");
-        $("#publishButton").removeClass().addClass('fadeOut animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-         
-        });
-        
-        publishRunning = true;
-      }
-    });
-  });
+#name, #email, #textarea, #submit {
+  color: rgb(119, 119, 119);
+  display: block;
+  height: 40px;
+  text-decoration: none solid rgb(119, 119, 119);
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid rgba(144, 144, 144, 0.25);
+  outline: rgb(119, 119, 119) none 0;
+  padding: 0 16px;
+  margin: 15px 0;
+}
 
-</script>
-</body>
+#name, #email, #textarea{
+  width: 100%;
+  font: 16px Arial, Helvetica, sans-serif;
+}
+
+#textarea {
+  height: 100px;
+  padding: 16px;
+  outline: rgb(119, 119, 119) none 0;
+}
+
+#submit {
+  box-shadow: rgba(144, 144, 144, 0.25) 0 0 0 2px inset;
+  color: rgb(102, 102, 102);
+  cursor: pointer;
+  height: 46px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 0 none rgb(102, 102, 102);
+  border-radius: 999px;
+  font: bold 14px Arial, Helvetica, sans-serif;
+  padding: 0 40px;
+}
+</style>
+<script src="//load.sheetsu.com?a=39a0276bfc0c&s=8"></script>
+  </body>
 </html>
