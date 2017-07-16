@@ -10,7 +10,7 @@
         <input name="last" placeholder="Last Name" type="text" id="last" />
       </div>
       <div class="col-md-4 col-sm-4">
-        <select name=email sheetsu=https://sheetsu.com/apis/v1.0/7ffd0a148985>
+        <select name=email sheetsu="https://sheetsu.com/apis/v1.0/7ffd0a148985"  sheetsu-sheet="Sheet1">
           <option>{{name}}</option
         </select>
       </div>
@@ -24,6 +24,11 @@
       </div>
     </div>
   </form>
+    
+  <div sheetsu="https://sheetsu.com/apis/v1.0/7ffd0a148985" sheetsu-limit="2" sheetsu-sheet="Sheet1">
+    <p>Name: {{name}}</p>
+    <p>Score: {{score}}</p>
+  </div>
 </div>
 
 <style>@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
